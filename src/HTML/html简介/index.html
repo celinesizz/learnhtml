@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" type="text/css" HREF="Mystyle.css" />
     <style type="text/css">
         h1 {
             color: blueviolet;
@@ -19,6 +20,12 @@
             color: dimgray;
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 14px;
+        }
+        input.colorful, h1.colorful, ul.colorful li ol li {
+            color:coral;
+            background:lightgreen;
+            font-family:fantasy;
+            font-size:33px;
         }
     </style>
 </head>
@@ -112,7 +119,7 @@
 <hr />
 <h1>列表學習0203</h1>
 <h5>嵌套列表：</h5>
-<ul>
+<ul class="colorful">
     <li>可樂</li>
     <li>水
         <ol>
@@ -122,9 +129,77 @@
     </li>
     <li>咖啡</li>
 </ul>
+<hr />
+<H1 class="colorful">表单学习0204</H1>
+<form>
+    First name:<br>
+    <input class="colorful" type="text" name="firstname">
+    <br>
+    last name:<br>
+    <input class="colorful" type="text" name="lastname">
+    <br>
+    Sexual:<br>
+    <input class="colorful" type="radio" name="sex" value="male" >Male
+    <br>
+    <input class="colorful" type="radio" name="sex" value="female" >Female
+    <br>
+    <input class="colorful" type="submit" value="Submit">
+</form>
+
+<form>
+    <fieldset>
+    First name:<br>
+    <input type="text" name="firstname"value="Celine"readonly>
+    <br>
+    last name:<br>
+    <input type="text" name="lastname" placeholder="Last Name">
+    <br>
+    Sexual:<br>
+    <input type="radio" name="sex" value="male" >Male
+    <br>
+    <input type="radio" name="sex" value="female" >Female
+    <br>
+    Age：
+    <br>
+    <input type="number" name="age" min="0" max="99" step="1" value="20"><br>
+    Birthday：<br>
+    <input type="date" name="bday" min="1918-01-01" max="2018-02-04" value="1998-02-04"><br>
+    Education:<br>
+    <select name="Education">
+        <option value="Master">Master</option>
+        <option value="Doctor"Selected>Doctor</option>
+    </select>
+    <br>
+    自我介绍：<br>
+    <textarea name="message" rows="1" cols="25">这个人很懒，什么都没有留下
+    </textarea>
+    <br>
+    <button type="button" onclick="alert('hello!')">Click me!</button>
+    <br>
+    设置用户名：<br>
+    <input type="text" name="username">
+    <br>
+    设置密码：<br>
+    <input type="password" name="password">
+    <br>
+    确认密码：<br>
+    <input type="password" name="check password">
+    <br>
+    你感兴趣的内容：<br>
+    <input type="checkbox" name="interest" value="美食">美食<br>
+    <input type="checkbox" name="interest" value="电影">电影<br>
+    <input type="checkbox" name="interest" value="旅游">旅游<br>
+    <input type="range" name="points" min="0" max="10"><br>
+    Search Baidu:
+    <input type="search" name="Baidusearch">
 
 
 
+    <br><br>
+    <input type="submit" value="Submit"></fieldset>
+
+    
+</form>
 
 </body>
 
